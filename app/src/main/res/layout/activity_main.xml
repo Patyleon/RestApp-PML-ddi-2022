@@ -8,15 +8,16 @@
     tools:context=".MainActivity"
     tools:deviceIds="wear">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/inner_frame_layout_padding"
+        app:layoutDescription="@xml/activity_main_xml_framelayout_scene"
         app:layout_boxedEdges="all">
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/mensajeTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hello_world" />
@@ -25,7 +26,9 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Button"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="73dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 </androidx.wear.widget.BoxInsetLayout>
